@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  pg:
+    image: postgis/postgis:14-3.2-alpine
+    environment:
+      POSTGRES_USER: privateSale
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: privateSale_DB
+    volumes:
+      - postgres_local:/var/lib/postgresql/data
+    ports:
+      - '0.0.0.0:5459:5432'
+volumes:
+  postgres_local:
