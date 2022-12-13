@@ -3,4 +3,3 @@ dist
 src/entities/index.model.ts
 .dockerignore
 .env_development
-config
